@@ -2,5 +2,14 @@
 
 // Блок: header
 .header {
+    color: var(--color-base);
+    
+    @include mq(md) {
+        color: green;
+    }
 
+    @include mq(xxl) { 
+        color: yellow;
+    }
+    
 }

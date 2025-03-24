@@ -1,6 +1,6 @@
 :root {
   /* Основной фоновый цвет темы */
-  // --color-base: #000000;
+  --color-base: #07af91;
 
   /* Вторичный фоновый цвет, для карточек или подвала */
   // --color-secondary: #151515;
@@ -19,17 +19,6 @@
   --font-family: "Montserrat", sans-serif;
   --second-family: "Inter", sans-serif;
 }
-
-// $color-base: var(--color-base);
-// $color-secondary: var(--color-secondary);
-// $color-primary: var(--color-primary);
-// $color-brand: var(--color-brand);
-// $color-muted: var(--color-muted);
-// $color-border: var(--color-border);
-
-// Typography
-// $font-family-primary: "Century Gothic";
-// $font-family-secondary: ;
 
 // Breakpoints
 $screen-xs: 320px;

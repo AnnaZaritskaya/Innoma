@@ -1,0 +1,21 @@
+@use '../mixins' as *;
+
+// Блок: logo
+.logo {
+    text-decoration: none;
+
+    &__icon {
+        width: 98px;
+        height: 12px;
+
+        @include mq(md) {
+            width: 122px;
+            height: 15px;
+        }
+
+        @include mq(xxl) {
+            width: 146px;
+            height: 18px;
+        }
+    }
+}

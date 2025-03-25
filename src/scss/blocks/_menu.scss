@@ -1,0 +1,71 @@
+@use "../mixins" as *;
+
+// Блок: menu
+.menu {
+    $block: &;
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        list-style: none;
+    }
+
+    &__item {
+        @include mq(md) {
+            display: inline-block;
+        }
+
+        &:not(:last-child) {
+            @include mq(md) {
+                margin-right: 34px;
+            }
+
+            @include mq(xxl) {
+                margin-right: 52px;
+            }
+        }
+    }
+
+    &__link {
+        @include mq(md) {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @include mq(xxl) {
+            font-size: 18px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // menu in footer
+    @at-root .footer & {
+        & #{$block}__item {
+            &:not(:last-child) {
+                @include mq(md) {
+                    margin-right: 26px;
+                }
+
+                @include mq(xxl) {
+                    margin-right: 52px;
+                }
+            }
+        }
+
+        & #{$block}__link {
+            @include mq(md) {
+                font-size: 14px;
+            }
+
+            @include mq(xxl) {
+                font-size: 18px;
+            }
+        }
+    }
+}

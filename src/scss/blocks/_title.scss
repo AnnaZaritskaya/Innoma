@@ -1,0 +1,78 @@
+@use "../mixins" as *;
+
+// Блок: title
+.title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 3.3;
+    color: var(--color-primary);
+
+    @include mq(md) {
+        font-size: 32px;
+        line-height: 2.5;
+    }
+
+    @include mq(xxl) {
+        font-size: 36px;
+        line-height: 2.2;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.94;
+        color: #fff;
+
+        @include mq(md) {
+            font-size: 18px;
+        }
+
+        @include mq(xxl) {
+            font-size: 34px;
+            line-height: 2.35;
+        }
+    }
+
+    &--h1 {
+        font-size: 24px;
+        line-height: 1.67;
+        text-transform: uppercase;
+        color: #fff;
+
+        @include mq(md) {
+            font-size: 36px;
+            line-height: 1.65;
+        }
+
+        @include mq(xxl) {
+            font-size: 43px;
+            line-height: 1.38;
+        }
+    }
+
+    &--h3 {
+        font-weight: 600;
+        font-size: 16px;
+
+        @include mq(md) {
+            font-size: 18px;
+        }
+
+        @include mq(xxl) {
+            font-size: 24px;
+        }
+    }
+
+    &--h4 {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 2.14;
+        color: #000;
+
+        @include mq(md) {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+    }
+}

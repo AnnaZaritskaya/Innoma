@@ -1,0 +1,49 @@
+@use "../mixins" as *;
+
+// Блок: button
+.button {
+    $block: &;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(321deg, #016ca8 0%, #61b5e4 100%);
+    color: #fff;
+    min-height: 55px;
+    padding: 14px 46px;
+    line-height: 1.3;
+
+    @include mq(md) {
+        max-width: fit-content;
+        min-height: 70px;
+        font-size: 18px;
+    }
+
+    @include mq(xxl) {
+        font-size: 20px;
+    }
+
+    &:hover {
+        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: var(--color-secondary);
+    }
+
+    &--color-base {
+        background: var(--color-base);
+
+        @include mq(xxl) {
+            font-size: 18px;
+        }
+
+        &:hover {
+            background: var(--color-base);
+        }
+    }
+
+
+}

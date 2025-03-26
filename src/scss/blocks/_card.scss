@@ -1,0 +1,101 @@
+@use "../mixins" as *;
+
+// Блок: card
+.card {
+    $block: &;
+
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.09);
+    background: #fff;
+    padding: 24px 17px 33px 17px; //+
+
+    @include mq(md) {
+        flex: 1;
+        min-width: calc(50%);
+        max-width: 354px;
+        padding: 50px 27px 69px 27px;//!
+    }
+
+    @include mq(xxl) {
+        max-width: 392px;
+        padding: 69px 30px 35px 30px;//!
+    }
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 36px;
+
+        @include mq(md) {
+            margin-bottom: 30px;
+        }
+
+        @include mq(xxl) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__numb {
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 0.8; //+
+        color: rgba(17, 120, 178, 0.5);
+
+        @include mq(md) {
+            font-size: 80px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px; //+
+        text-align: center;
+
+        @include mq(md) {
+            margin-bottom: 23px; //!
+        }
+
+        @include mq(xxl) {
+            margin-bottom: 26px; //!
+        }
+    }
+
+    &__txt {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+        color: #000;
+    }
+
+    &--wide {
+        @include mq(md) {
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+
+        @include mq(xxl) {
+            flex: 1;
+            min-width: calc(50%);
+        }
+
+        & #{$block}__txt {
+            @include mq(md) {
+                max-width: 398px;
+                margin: 0 auto;
+            }
+
+            @include mq(xxl) {
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+// .contener {
+//     display: flex;
+//     flex-wrap: wrap;
+// }

@@ -1,0 +1,19 @@
+@use "../mixins" as *;
+
+// Блок: subtitle
+.subtitle {
+    // добавить шрифт
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.94;
+    color: #fff;
+
+    @include mq(md) {
+        font-size: 18px;
+    }
+
+    @include mq(xxl) {
+        font-size: 34px;
+        line-height: 2.35;
+    }
+}

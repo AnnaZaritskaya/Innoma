@@ -18,7 +18,7 @@
         line-height: 2.2;
     }
 
-    &--h1 {
+    &--large {
         font-size: 24px;
         line-height: 1.67;
         text-transform: uppercase;
@@ -35,7 +35,7 @@
         }
     }
 
-    &--h3 {
+    &--medium {
         font-weight: 600;
         font-size: 16px;
 
@@ -48,7 +48,7 @@
         }
     }
 
-    &--h4 {
+    &--small {
         font-weight: 600;
         font-size: 14px;
         line-height: 1.5;
@@ -57,6 +57,10 @@
         @include mq(md) {
             font-size: 20px;
         }
+    }
+
+    &--center {
+        text-align: center;
     }
 
     &--color-base {

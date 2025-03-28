@@ -2,6 +2,8 @@
 
 // Блок: card-small
 .card-small {
+    $block: &;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +42,7 @@
             font-size: 36px;
             margin-bottom: 0;
         }
-        
+
         @include mq(xxl) {
             font-size: 48px;
             margin-bottom: 7px;
@@ -72,10 +74,64 @@
             font-size: 14px;
         }
     }
+
+    &--interaction {
+        font-weight: 500;
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+        background: #1178b2;
+        text-decoration: none;
+
+        &:hover {
+            background: #07af91;
+        }
+        
+        & #{$block}__icons {
+            margin-bottom: 5px;
+
+            @include mq(xxl) {
+                margin-bottom: 20px;
+            }
+        }
+        
+        & #{$block}__icon-mobile{
+            width: 25px;
+            height: 23px;
+
+            @include mq(xxl) {
+                display: none;
+            }
+        }
+
+        & #{$block}__icon-desktop {
+            display: none;
+
+            @include mq(xxl) {
+                display: block;
+                width: 48px;
+                height: 40px;
+            }
+        }
+
+        & #{$block}__content {
+            font-weight: 500;
+            color: #fff;
+
+            @include mq(md) {
+                max-width: 120px;
+            }
+
+            @include mq(xxl) {
+                font-size: 20px;
+                max-width: 170px;
+            }
+        }
+
+    }
 }
-// .cont {
-//     max-width: 598px;
-//     display: flex;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-// }
+
+.cont {
+    max-width: 598px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

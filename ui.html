@@ -15,6 +15,11 @@
     .dark {
       background: var(--color-base);
     }
+
+    /* .cont {
+      display: flex;
+      justify-content: space-between;
+    } */
   </style>
 </head>
 
@@ -32,6 +37,10 @@
       <use xlink:href="#arrow"></use>
     </svg>
 
+    <svg>
+      <use xlink:href="#arrow-bold"></use>
+    </svg>
+
   </div>
 
   <!-- UI -->
@@ -44,7 +53,8 @@
 
   <hr>
 
-  <h1 class="title title--h1"><span class="title--color-base">Запустите технологический бизнес на международных рынках</span></h1>
+  <h1 class="title title--h1"><span class="title--color-base">Запустите технологический бизнес на международных
+      рынках</span></h1>
 
   <hr>
 
@@ -85,7 +95,7 @@
     <hr>
 
     <div class="subtitle">Открыт набор заявок на акселератор</div>
-    
+
     <hr>
 
     <div class="card">
@@ -97,7 +107,8 @@
           <h4 class="title title--h4">IT проекты на стадии идеи</h4>
         </div>
         <div class="card__txt">
-          <p>Для стартапов, которые планируют привлечь международные инвестиции, протестировать спрос и запустить продукт</p>
+          <p>Для стартапов, которые планируют привлечь международные инвестиции, протестировать спрос и запустить
+            продукт</p>
         </div>
       </div>
     </div>
@@ -136,24 +147,24 @@
 
     <div class="cont">
       <div class="card-info">
-        <div class="card-info__title">
-          <img class="card-info__title--three" src="/src/img/3.svg" alt="3">
+        <div class="card-info__title card-info__title--three">
+          <img src="/src/img/3.svg" alt="3">
         </div>
         <div class="card-info__content">
           <p>Месяца обучения</p>
         </div>
       </div>
       <div class="card-info">
-        <div class="card-info__title">
-          <img class="card-info__title--world" src="/src/img/world.svg" alt="3">
+        <div class="card-info__title card-info__title--world">
+          <img src="/src/img/world.svg" alt="3">
         </div>
         <div class="card-info__content">
           <p>Месяца обучения</p>
         </div>
       </div>
       <div class="card-info">
-        <div class="card-info__title">
-          <img class="card-info__title--person" src="/src/img/person.svg" alt="3">
+        <div class="card-info__title card-info__title--person">
+          <img src="/src/img/person.svg" alt="3">
         </div>
         <div class="card-info__content">
           <p>Месяца обучения</p>
@@ -199,6 +210,23 @@
 
     <hr>
 
+    <div class="media-video">
+      <h3 class="title title--medium title--center media-video__title">Об акселерационной программе</h3>
+      <a class="media-video__link" href="">
+        <svg class="media-video__icon">
+          <use xlink:href="#arrow-bold"></use>
+        </svg>
+      </a>
+    </div>
+
+    <hr>
+
+    <a href="" class="card-partners">
+      <img src="/src/img/Vadar.png" alt="" class="card-partners__img card-partners__img--vadar">
+    </a>
+
+    <hr>
+
     <button class="burger"></button>
   </div>
 
@@ -217,13 +245,25 @@
     </symbol>
 
     <symbol id="arrow" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4472 11.0636L13.0833 17.4276C12.6927 17.8181 12.0596 17.8181 11.669 17.4276L5.30508 11.0636C4.91456 10.6731 4.91456 10.0399 5.30508 9.64941C5.69561 9.25889 6.32877 9.25889 6.7193 9.64941L11.3762 14.3063L11.3762 -5.11841e-07L13.3762 -3.89449e-07L13.3762 14.3063L18.033 9.64941C18.4235 9.25889 19.0567 9.25889 19.4472 9.64941C19.8377 10.0399 19.8377 10.6731 19.4472 11.0636Z" fill="white" />
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7526 21.8459C24.7526 22.3982 24.3048 22.8459 23.7526 22.8459L1 22.8459C0.447716 22.8459 0 22.3982 0 21.8459C0 21.2937 0.447716 20.8459 1 20.8459L23.7526 20.8459C24.3048 20.8459 24.7526 21.2937 24.7526 21.8459Z" fill="white" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M19.4472 11.0636L13.0833 17.4276C12.6927 17.8181 12.0596 17.8181 11.669 17.4276L5.30508 11.0636C4.91456 10.6731 4.91456 10.0399 5.30508 9.64941C5.69561 9.25889 6.32877 9.25889 6.7193 9.64941L11.3762 14.3063L11.3762 -5.11841e-07L13.3762 -3.89449e-07L13.3762 14.3063L18.033 9.64941C18.4235 9.25889 19.0567 9.25889 19.4472 9.64941C19.8377 10.0399 19.8377 10.6731 19.4472 11.0636Z"
+        fill="white" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M24.7526 21.8459C24.7526 22.3982 24.3048 22.8459 23.7526 22.8459L1 22.8459C0.447716 22.8459 0 22.3982 0 21.8459C0 21.2937 0.447716 20.8459 1 20.8459L23.7526 20.8459C24.3048 20.8459 24.7526 21.2937 24.7526 21.8459Z"
+        fill="white" />
     </symbol>
 
     <symbol id="arrow-desc" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M30.8192 26.4271L24.4552 32.7911C24.0647 33.1816 23.4315 33.1816 23.041 32.7911L16.677 26.4271C16.2865 26.0366 16.2865 25.4034 16.677 25.0129C17.0676 24.6224 17.7007 24.6224 18.0912 25.0129L22.7481 29.6697L22.7481 -5.11841e-07L24.7481 -3.89449e-07L24.7481 29.6697L29.405 25.0129C29.7955 24.6224 30.4286 24.6224 30.8192 25.0129C31.2097 25.4034 31.2097 26.0366 30.8192 26.4271Z" fill="white" />
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M47.4962 41C47.4962 41.5523 47.0485 42 46.4962 42L0.999992 42C0.447708 42 -7.62939e-06 41.5523 -7.62939e-06 41C-7.62939e-06 40.4477 0.447708 40 0.999992 40L46.4962 40C47.0485 40 47.4962 40.4477 47.4962 41Z" fill="white" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M30.8192 26.4271L24.4552 32.7911C24.0647 33.1816 23.4315 33.1816 23.041 32.7911L16.677 26.4271C16.2865 26.0366 16.2865 25.4034 16.677 25.0129C17.0676 24.6224 17.7007 24.6224 18.0912 25.0129L22.7481 29.6697L22.7481 -5.11841e-07L24.7481 -3.89449e-07L24.7481 29.6697L29.405 25.0129C29.7955 24.6224 30.4286 24.6224 30.8192 25.0129C31.2097 25.4034 31.2097 26.0366 30.8192 26.4271Z"
+        fill="white" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M47.4962 41C47.4962 41.5523 47.0485 42 46.4962 42L0.999992 42C0.447708 42 -7.62939e-06 41.5523 -7.62939e-06 41C-7.62939e-06 40.4477 0.447708 40 0.999992 40L46.4962 40C47.0485 40 47.4962 40.4477 47.4962 41Z"
+        fill="white" />
+    </symbol>
+
+    <symbol id="arrow-bold" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.8921 10.7677C22.2254 11.5375 22.2254 13.462 20.8921 14.2318L3.80402 24.0976C2.47069 24.8674 0.804021 23.9051 0.804021 22.3655L0.804022 2.63391C0.804022 1.09431 2.47069 0.132059 3.80402 0.901859L20.8921 10.7677Z" fill="white" />
     </symbol>
 
   </svg>

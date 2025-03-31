@@ -18,7 +18,7 @@
         padding-left: 0;
 
         &:not(:last-child) {
-          margin-right: 20px;
+            margin-right: 20px;
         }
     }
 
@@ -39,50 +39,57 @@
         }
 
         &--three {
-            width: 45px;
-            height: 57px;
-
-            @include mq(md) {
-                width: 53px;
-                height: 75px;
-            }
-
-            @include mq(xxl) {
-                width: 95px;
-                height: 105px;
+            img {
+                width: 45px;
+                height: 57px;
+    
+                @include mq(md) {
+                    width: 53px;
+                    height: 75px;
+                }
+    
+                @include mq(xxl) {
+                    width: 95px;
+                    height: 105px;
+                }
             }
         }
-
+    
         &--world {
-            width: 52px;
-            height: 52px;
-
-            @include mq(md) {
-                width: 73px;
-                height: 72px;
-            }
-
-            @include mq(xxl) {
-                width: 95px;
-                height: 95px;
+            img {
+                width: 52px;
+                height: 52px;
+    
+                @include mq(md) {
+                    width: 73px;
+                    height: 72px;
+                }
+    
+                @include mq(xxl) {
+                    width: 95px;
+                    height: 95px;
+                }
             }
         }
-
+    
         &--person {
-            width: 52px;
-            height: 54px;
-
-            @include mq(md) {
-                width: 72px;
-                height: 74px;
-            }
-
-            @include mq(xxl) {
-                width: 95px;
-                height: 97px;
+            img {
+                width: 52px;
+                height: 54px;
+    
+                @include mq(md) {
+                    width: 72px;
+                    height: 74px;
+                }
+    
+                @include mq(xxl) {
+                    width: 95px;
+                    height: 97px;
+                }
             }
         }
     }
+
 
     &__content {
         font-family: var(--second-family);
@@ -101,7 +108,3 @@
     }
 }
 
-// .cont {
-//     display: flex;
-//     justify-content: space-between;
-// }

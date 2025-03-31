@@ -1,0 +1,83 @@
+@use "../mixins" as *;
+
+// Блок: card-partners
+.card-partners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    max-width: 121px;
+    min-height: 66px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    margin-bottom: 12px;
+
+    @include mq(md) {
+        max-width: 206px;
+        min-height: 112px;
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        &--pitch-book {
+            width: 91px;
+            height: 19px;
+
+            @include mq(md) {
+                width: 154px;
+                height: 32px;
+            }
+        }
+
+        &--angel-list {
+            width: 53px;
+            height: 45px;
+
+            @include mq(md) {
+                width: 90px;
+                height: 76px;
+            }
+        }
+
+        &--crunchbase {
+            width: 90px;
+            height: 18px;
+
+            @include mq(md) {
+                width: 152px;
+                height: 31px;
+            }
+        }
+
+        &--dealroom {
+            width: 85px;
+            height: 20px;
+
+            @include mq(md) {
+                width: 144px;
+                height: 32px;           
+            }
+        }
+
+        &--f65 {
+            width: 50px;
+            height: 49px;
+
+            @include mq(md) {
+                width: 85px;
+                height: 84px;
+            }
+        }
+
+        &--vadar {
+            width: 75px;
+            height: 30px;
+
+            @include mq(md) {
+                width: 126px;
+                height: 52px;
+            }
+        }
+    }
+}

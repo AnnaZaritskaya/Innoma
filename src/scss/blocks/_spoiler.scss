@@ -1,0 +1,74 @@
+@use "../mixins" as *;
+
+// Блок: spoiler
+.spoiler {
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.09);
+    background: #fff;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 93px;
+    }
+
+    &__step {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.67;
+        color: #2a79c2;
+    }
+
+    &__period {
+        font-family: var(--font-family);
+        font-size: 12px;
+        line-height: 1.67;
+        color: #000;
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.67;
+        text-align: center;
+        color: #000;
+    }
+
+    &__body {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+
+        @at-root .is-active & {
+            height: auto;
+            overflow: visible;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        min-height: 60px;
+        border-top: 1px solid #E9E9E9;
+        margin: 0 15px;
+    }
+
+    &__list-link {
+        font-family: var(--font-family);
+        text-decoration: none;
+        font-size: 12px;
+        color: #555;
+    }
+}

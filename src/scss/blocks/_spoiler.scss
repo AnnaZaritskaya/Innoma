@@ -2,6 +2,7 @@
 
 // Блок: spoiler
 .spoiler {
+    $block: &;
     border-radius: 10px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.09);
     background: #fff;
@@ -11,7 +12,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
         min-height: 93px;
+
+        @include mq(md) {
+            flex-direction: row;
+            justify-content: space-around;
+            min-height: 76px;
+            margin: 0 31px;
+            padding-right: 60px;
+        }
+
+        @include mq(xxl) {
+            justify-content: flex-start;
+            min-height: 86px;
+            margin: 0 50px;
+        }
     }
 
     &__step {
@@ -20,9 +36,21 @@
         font-size: 12px;
         line-height: 1.67;
         color: #2a79c2;
+
+        @include mq(md) {
+            font-size: 16px;
+            flex: 1;
+        }
+
+        @include mq(xxl) {
+            max-width: 112px;
+            font-size: 20px;
+            margin-right: 5px;
+        }
     }
 
     &__period {
+        display: none;
         font-family: var(--font-family);
         font-size: 12px;
         line-height: 1.67;
@@ -36,21 +64,67 @@
         line-height: 1.67;
         text-align: center;
         color: #000;
+
+        @include mq(md) {
+            font-size: 16px;
+            flex: 3;
+        }
+        
+        @include mq(xxl) {
+            text-align: left;
+            font-size: 20px;
+        }
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -12px;
+        width: 24px;
+        height: 24px;
+        text-decoration: none;
+        border-radius: 50%;
+        background: #2a79c2;
+
+        @include mq(md) {
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+
+        @include mq(xxl) {
+            width: 39px;
+            height: 39px;
+        }
+    }
+
+    &__icon {
+        width: 9px;
+        height: 9px;
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+
+        @include mq(md) {
+            width: 11px;
+            height: 11px;
+        }
+
+        @include mq(xxl) {
+            width: 15px;
+            height: 15px;
+        }
     }
 
     &__body {
         height: 0;
         overflow: hidden;
         visibility: hidden;
+        transition: max-height 0.3s ease;
         opacity: 0;
-        transition: all 0.3s;
-
-        @at-root .is-active & {
-            height: auto;
-            overflow: visible;
-            visibility: visible;
-            opacity: 1;
-        }
     }
 
     &__list {
@@ -61,8 +135,16 @@
         display: flex;
         align-items: center;
         min-height: 60px;
-        border-top: 1px solid #E9E9E9;
+        border-top: 1px solid #e9e9e9;
         margin: 0 15px;
+
+        @include mq(md) {
+            margin: 0 31px;
+        }
+
+        @include mq(xxl) {
+            margin: 0 50px;
+        }
     }
 
     &__list-link {
@@ -70,5 +152,66 @@
         text-decoration: none;
         font-size: 12px;
         color: #555;
+
+        @include mq(md) {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        @include mq(xxl) {
+            font-size: 16px;
+        }
+    }
+
+    @at-root .is-active {
+        & #{$block}__head {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 145px;
+            margin: 0 auto;
+
+            @include mq(md) {
+                justify-content: space-between;
+                max-width: 100%;
+                align-items: center;
+                margin: 0 31px;
+            }
+        }
+
+        & #{$block}__period {
+            display: inline-block;
+            margin-left: 21px;
+
+            @include mq(md) {
+                font-size: 16px;
+                order: 3;
+            }
+        }
+
+        & #{$block}__title {
+            padding-bottom: 14px;
+
+            @include mq(md) {
+                padding-bottom: 0;
+                flex: 2;
+            }
+        }
+
+        & #{$block}__box {
+            @include mq(md) {
+                transform: translateY(-50%);
+            }
+        }
+
+        & #{$block}__icon {
+            transform: rotate(0deg);
+        }
+
+        & #{$block}__body {
+            height: auto;
+            overflow: visible;
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }

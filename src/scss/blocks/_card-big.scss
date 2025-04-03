@@ -45,6 +45,36 @@
         @include mq(xxl) {
             margin-bottom: 15px;
         }
+
+        &--file {
+            width: 60px;
+            height: 72px;
+    
+            @include mq(xxl) {
+                width: 67px;
+                height: 76px;
+            }
+        }
+    
+        &--gear {
+            width: 82px;
+            height: 67px;
+    
+            @include mq(xxl) {
+                width: 102px;
+                height: 76px;
+            }
+        }
+    
+        &--rocket {
+            width: 68px;
+            height: 61px;
+    
+            @include mq(xxl) {
+                width: 80px;
+                height: 71px;
+            }
+        }
     }
 
     &__title {
@@ -63,12 +93,8 @@
     &__body {
         padding: 20px 30px;
 
-        @include mq(md) {
-            padding: 0 30px;
-        }
-
         @include mq(xxl) {
-            padding: 10px 40px 0 40px;
+            padding: 10px 40px 20px 40px;
         }
     }
 
@@ -81,15 +107,15 @@
             min-height: 270px;
         }
 
-    }
+        &::before {
+            @include mq(md) {
+                content: '';
+                flex-grow: 1;
+            }
 
-    &__spacer {
-        @include mq(md) {
-            flex-grow: 1;
-        }
-
-        @include mq(xxl) {
-            display: none;
+            @include mq(xxl) {
+                display: none;
+            }
         }
     }
 
@@ -103,8 +129,7 @@
 
         @include mq(xxl) {
             font-size: 18px;
-            margin-bottom: 5px;
-        }
+         }
     }
 
     &__list {
@@ -198,24 +223,6 @@
 
     &__button {
         max-width: 100%;
-    }
-
-    &--file {
-        width: 59px;
-        height: 72px;
-    }
+    }   
 }
 
-.wrap {
-    @include mq(md) {
-        max-width: 730px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 0 auto;
-    }
-
-    @include mq(xxl) {
-        max-width: 1216px;
-    }
-}

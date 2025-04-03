@@ -1,0 +1,29 @@
+@use '../mixins' as *;
+
+// Блок: temporary
+.wrap {
+    @include mq(md) {
+        max-width: 730px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    @include mq(xxl) {
+        max-width: 1216px;
+    }
+}
+
+.cont {
+    @include mq(md) {
+        max-width: 730px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    @include mq(xxl) {
+        max-width: 1216px;
+    }
+  }

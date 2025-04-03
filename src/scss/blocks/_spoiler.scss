@@ -120,11 +120,12 @@
     }
 
     &__body {
-        height: 0;
         overflow: hidden;
         visibility: hidden;
-        transition: max-height 0.3s ease;
+        transition: all 0.3s ease;
         opacity: 0;
+        height: 0;
+        max-height: 0;
     }
 
     &__list {
@@ -176,6 +177,10 @@
                 align-items: center;
                 margin: 0 31px;
             }
+
+            @include mq(xxl) {
+                margin: 0 50px;
+            }
         }
 
         & #{$block}__period {
@@ -208,10 +213,11 @@
         }
 
         & #{$block}__body {
-            height: auto;
+            height: 100%;
             overflow: visible;
             visibility: visible;
             opacity: 1;
+            max-height: 300px;
         }
     }
 }

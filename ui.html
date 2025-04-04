@@ -15,7 +15,6 @@
     .dark {
       background: var(--color-base);
     }
-    
   </style>
 </head>
 
@@ -39,6 +38,10 @@
 
     <svg>
       <use xlink:href="#arrow-small"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="#arrow-scroll"></use>
     </svg>
 
   </div>
@@ -141,7 +144,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
 
     <hr>
@@ -204,7 +207,7 @@
     </div>
 
     <hr>
-    
+
     <div class="wrap">
       <div class="card-big">
         <div class="card-big__head">
@@ -401,6 +404,59 @@
 
     <hr>
 
+    <div class="employees">
+      <div class="employees__nav-box">
+        <a href="#" class="employees__desktop-nav">
+          <svg class="employees__nav-icon  employees__nav-icon--left">
+            <use xlink:href="#arrow-small"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="employees__container">
+        <div class="employees__item">
+          <img src="src/img/men-name.jpg" class="employees__photo" alt=""></img>
+          <p class="employees__name">Юрий Ким</p>
+          <p class="employees__quote">Проведение исследования целевой аудитории позволит сформировать Product market fit
+          </p>
+        </div>
+        <div class="employees__item">
+          <img src="src/img/men-name.jpg" class="employees__photo" alt=""></img>
+          <p class="employees__name">Юрий Ким</p>
+          <p class="employees__quote">Проведение исследования целевой аудитории позволит сформировать Product market fit
+          </p>
+        </div>
+        <div class="employees__item">
+          <img src="src/img/men-name.jpg" class="employees__photo" alt=""></img>
+          <p class="employees__name">Юрий Ким</p>
+          <p class="employees__quote">Проведение исследования целевой аудитории позволит сформировать Product market fit
+          </p>
+        </div>
+      </div>
+
+      <div class="employees__nav-box employees__nav-box--right">
+        <a href="#" class="employees__desktop-nav">
+          <svg class="employees__nav-icon employees__nav-icon--right">
+            <use xlink:href="#arrow-small"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="employees__button">
+        <a href="" class="button__link">
+          <svg class="employees__icon employees__icon--left">
+            <use xlink:href="#arrow-scroll"></use>
+          </svg>
+        </a>
+        <a href="" class="button__link">
+          <svg class="employees__icon employees__icon--right">
+            <use xlink:href="#arrow-scroll"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <hr>
+
     <button class="burger"></button>
   </div>
 
@@ -437,11 +493,19 @@
     </symbol>
 
     <symbol id="arrow-bold" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20.8921 10.7677C22.2254 11.5375 22.2254 13.462 20.8921 14.2318L3.80402 24.0976C2.47069 24.8674 0.804021 23.9051 0.804021 22.3655L0.804022 2.63391C0.804022 1.09431 2.47069 0.132059 3.80402 0.901859L20.8921 10.7677Z" fill="white" />
+      <path
+        d="M20.8921 10.7677C22.2254 11.5375 22.2254 13.462 20.8921 14.2318L3.80402 24.0976C2.47069 24.8674 0.804021 23.9051 0.804021 22.3655L0.804022 2.63391C0.804022 1.09431 2.47069 0.132059 3.80402 0.901859L20.8921 10.7677Z"
+        fill="white" />
     </symbol>
 
     <symbol id="arrow-small" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M9.80005 5.6001L5.40005 1.6001L1.00005 5.6001" stroke="white" />
+    </symbol>
+
+    <symbol id="arrow-scroll" viewBox="0 0 87 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M0.292893 8.70711C-0.0976333 8.31659 -0.0976334 7.68343 0.292892 7.2929L6.65685 0.928939C7.04738 0.538415 7.68054 0.538415 8.07107 0.928939C8.46159 1.31946 8.46159 1.95263 8.07107 2.34315L2.41422 8.00001L8.07107 13.6569C8.46159 14.0474 8.46159 14.6806 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM87 9L1 9.00001L1 7.00001L87 7L87 9Z"
+        fill="#B1B1B1" />
     </symbol>
 
   </svg>

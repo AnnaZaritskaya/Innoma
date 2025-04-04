@@ -1,0 +1,197 @@
+@use "../mixins" as *;
+
+// Блок: employees
+.employees {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 30px;
+
+    @include mq(xxl) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &__container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        cursor: grab;
+        scroll-padding-left: 20px; // Для правильного прилипания при скролле
+        padding-bottom: 15px; // Для скроллбара
+        flex-grow: 1;
+
+        @include mq(md) {
+            scroll-padding-left: 50px;
+            padding-bottom: 30px;
+        }
+
+        @include mq(xxl) {
+            width: calc(100% - 80px);
+            min-width: 0;
+            margin: 0 auto;
+            justify-content: space-around;
+            scroll-snap-type: none;
+            margin: 0 40px;
+            scroll-padding-left: 40px;
+            scroll-padding-right: 40px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &.is-dragging {
+            scroll-snap-type: none;
+            cursor: grabbing;
+        }
+    }
+
+    &__item {
+        scroll-snap-align: start;
+        max-width: 204px;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 255px;
+        margin: 20px 10px;
+        cursor: grab;
+        user-select: none;
+
+        @include mq(md) {
+            max-width: 230px;
+            margin: 20px 35px 20px 35px;
+        }
+    }
+
+    &__photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.09);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+
+        @include mq(md) {
+            width: 186px;
+            height: 186px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__name {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        color: #000;
+        margin-bottom: 8px;
+
+        @include mq(md) {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__quote {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.67;
+        text-align: center;
+        color: #000;
+
+        @include mq(md) {
+            font-size: 15px;
+            line-height: 1.33;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+        bottom: 0px;
+        z-index: 2;
+
+        @include mq(xxl) {
+            display: none;
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: 86px;
+        height: 15px;
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__nav-box {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        z-index: 2;
+        display: none;
+
+        @include mq(xxl) {
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+
+            &--right {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &__desktop-nav {
+        display: none;
+
+        @include mq(xxl) {
+            pointer-events: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: #2a79c2;
+        }
+    }
+
+    &__nav-icon {
+        @include mq(xxl) {
+            width: 15px;
+            height: 15px;
+
+            &--left {
+                transform: rotate(-90deg);
+            }
+
+            &--right {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

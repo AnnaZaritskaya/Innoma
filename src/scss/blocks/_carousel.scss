@@ -1,7 +1,7 @@
 @use "../mixins" as *;
 
-// Блок: employees
-.employees {
+// Блок: carousel
+.carousel {
     position: relative;
     display: flex;
     overflow: hidden;
@@ -125,47 +125,13 @@
         z-index: 2;
 
         @include mq(xxl) {
-            display: none;
+            bottom: auto;
+            top: 50%;
         }
     }
 
     &__link {
         cursor: pointer;
-    }
-
-    &__icon {
-        width: 86px;
-        height: 15px;
-
-        &--right {
-            transform: rotate(180deg);
-        }
-    }
-
-    &__nav-box {
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        z-index: 2;
-        display: none;
-
-        @include mq(xxl) {
-            pointer-events: none;
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            z-index: 10;
-
-            &--right {
-                right: 0;
-                left: auto;
-            }
-        }
-    }
-
-    &__desktop-nav {
-        display: none;
 
         @include mq(xxl) {
             pointer-events: auto;
@@ -175,21 +141,40 @@
             width: 39px;
             height: 39px;
             border-radius: 50%;
-            cursor: pointer;
             background: #2a79c2;
         }
     }
 
-    &__nav-icon {
+    &__icon {
+        width: 86px;
+        height: 15px;
+
         @include mq(xxl) {
+            display: none;
+        }
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__desk-icon {
+        display: none;
+
+        @include mq(xxl) {
+            display: block;
             width: 15px;
             height: 15px;
+        }
 
-            &--left {
+        &--left {
+            @include mq(xxl) {
                 transform: rotate(-90deg);
             }
+        }
 
-            &--right {
+        &--right {
+            @include mq(xxl) {
                 transform: rotate(90deg);
             }
         }

@@ -1,21 +1,21 @@
-export function initEmployeesCarousel() {
-  const employeesBlocks = document.querySelectorAll('.employees');
+export function initCarousel() {
+  const carouselBlocks = document.querySelectorAll('.carousel');
 
-  employeesBlocks.forEach(block => {
-    const container = block.querySelector('.employees__container');
+  carouselBlocks.forEach(block => {
+    const container = block.querySelector('.carousel__container');
     if (!container) return;
 
     const prevButtons = [
-      block.querySelector('.employees__nav-icon--left')?.closest('a'),
-      block.querySelector('.employees__icon--left')?.closest('a')
+      block.querySelector('.carousel__nav-icon--left')?.closest('a'),
+      block.querySelector('.carousel__icon--left')?.closest('a')
     ].filter(Boolean);
 
     const nextButtons = [
-      block.querySelector('.employees__nav-icon--right')?.closest('a'),
-      block.querySelector('.employees__icon--right')?.closest('a')
+      block.querySelector('.carousel__nav-icon--right')?.closest('a'),
+      block.querySelector('.carousel__icon--right')?.closest('a')
     ].filter(Boolean);
 
-    const firstItem = container.querySelector('.employees__item');
+    const firstItem = container.querySelector('.carousel__item');
     const scrollAmount = firstItem ? 
       firstItem.offsetWidth + 
       parseInt(getComputedStyle(firstItem).marginRight) : 

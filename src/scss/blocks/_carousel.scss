@@ -121,11 +121,10 @@
         justify-content: space-between;
         width: 100%;
         padding: 0 20px;
-        bottom: 0px;
+        top: calc(100% - 19px);
         z-index: 2;
 
         @include mq(xxl) {
-            bottom: auto;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -159,7 +158,7 @@
         }
     }
 
-    &__desk-icon {
+    &__icon-desk {
         display: none;
 
         @include mq(xxl) {

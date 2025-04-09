@@ -335,8 +335,9 @@
       </li>
     </ul>
 
+    
     <hr>
-
+    
     <div class="footer">
       <ul class="menu">
         <li class="menu__item">
@@ -353,6 +354,29 @@
         </li>
       </ul>
     </div>
+
+    <hr>
+
+    <button class="burger">
+      <span></span>
+      <span></span>
+      <nav class="burger__menu">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Кто мы?</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Акселератор</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Новости</a>
+          </li>
+        </ul>
+      </nav>
+    </button>
 
     <hr>
 
@@ -404,8 +428,6 @@
 
     <hr>
 
-    <!-- нейминг -->
-    <!-- оставить одну пару кнопок -->
     <div class="carousel">
       <div class="carousel__container">
         <div class="carousel__item">
@@ -429,22 +451,22 @@
       </div>
 
       <div class="carousel__button">
-        <a href="" class="button__link carousel__link">
+        <a href="" class="carousel__link">
           <svg class="carousel__icon carousel__icon--left">
             <use xlink:href="#arrow-scroll"></use>
           </svg>
 
-          <svg class="carousel__desk-icon carousel__desk-icon--left">
+          <svg class="carousel__icon-desk carousel__icon-desk--left">
             <use xlink:href="#arrow-small"></use>
           </svg>
         </a>
 
-        <a href="" class="button__link carousel__link">
+        <a href="" class="carousel__link">
           <svg class="carousel__icon carousel__icon--right">
             <use xlink:href="#arrow-scroll"></use>
           </svg>
 
-          <svg class="carousel__desk-icon carousel__desk-icon--right">
+          <svg class="carousel__icon-desk carousel__icon-desk--right">
             <use xlink:href="#arrow-small"></use>
           </svg>
         </a>
@@ -453,8 +475,58 @@
 
     <hr>
 
-    <button class="burger"></button>
+    <form class="contact-form">
+      <div class="contact-form__group">
+        <input class="contact-form__input" type="email" id="name" placeholder="Имя" required>
+        <input class="contact-form__input" type="email" id="email" placeholder="Почта" required>
+        <div class="contact-form__wrapper">
+          <label class="contact-form__label">
+            <img class="contact-form__flag-selected" 
+                 id="flagDisplay" 
+                 src="src/img/flags/ru.svg" 
+                 alt="Selected flag">
+            <div class="contact-form__flag-dropdown" id="flagDropdown">
+              <img class="contact-form__flag-item" 
+                   data-code="+7" 
+                   data-country="ru" 
+                   src="src/img/flags/ru.svg" 
+                   alt="Russia">
+              <img class="contact-form__flag-item" 
+                   data-code="+1" 
+                   data-country="us" 
+                   src="src/img/flags/us.svg" 
+                   alt="USA">
+              <img class="contact-form__flag-item" 
+                   data-code="+77" 
+                   data-country="kz" 
+                   src="src/img/flags/kz.svg" 
+                   alt="KAZ">
+              <img class="contact-form__flag-item" 
+                   data-code="+375" 
+                   data-country="by" 
+                   src="src/img/flags/by.svg" 
+                   alt="BY">
+              <img class="contact-form__flag-item" 
+                   data-code="+380" 
+                   data-country="ua" 
+                   src="src/img/flags/ua.svg" 
+                   alt="UA">
+            </div>
+            <input class="contact-form__input contact-form__input--phone" 
+                   type="tel" 
+                   id="phone" 
+                   placeholder="+7" 
+                   required>
+          </label>
+        </div>
+      </div>
+      <a href="#" class="button button--color-base contact-form__btn" onclick="submitForm()">Оставить заявку</a>
+    </form>
+
+    <hr>
+
   </div>
+
 
 
 

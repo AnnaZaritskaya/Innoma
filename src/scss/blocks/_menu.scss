@@ -3,10 +3,13 @@
 // Блок: menu
 .menu {
     $block: &;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 
     @include mq(md) {
-        display: block;
+        opacity: 1;
+        visibility: visible;
         list-style: none;
     }
 
@@ -67,5 +70,47 @@
                 font-size: 18px;
             }
         }
+    }
+
+    // menu in burger
+    @at-root .burger__menu & {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        min-height: 410px;
+        background: var(--color-base);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 3;
+
+        ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        &__item {
+            margin: 10px 0;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #e9e9e9;
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    @at-root .burger.active .burger__menu & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 }

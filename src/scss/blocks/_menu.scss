@@ -74,41 +74,41 @@
 
     // menu in burger
     @at-root .burger__menu & {
-        position: absolute;
-        top: 50px;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        min-height: 410px;
-        background: var(--color-base);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
+        height: 100vh;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all 0.3s ease;
+        transition: all 0.3 ease;
         z-index: 3;
-
-        ul {
-            list-style: none;
-            padding: 10px;
-            margin: 0;
-        }
+        list-style: none;
+        margin: 0 auto;
+        background: var(--color-base);
+        padding-top: 60px;
 
         &__item {
-            margin: 10px 0;
+            padding: 20px 0;
+            text-align: center;
 
             &:not(:last-child) {
                 border-bottom: 1px solid #e9e9e9;
+                margin: 0 100px;
             }
         }
 
         &__link {
-            text-decoration: none;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
             color: #fff;
+            text-decoration: none;
         }
     }
 
-    @at-root .burger.active .burger__menu & {
+    @at-root body.active .burger__menu & {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);

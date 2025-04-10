@@ -1,63 +1,81 @@
+@use "../mixins" as *;
+
 .burger {
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    border-radius: 5px;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 11px 11px;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-    z-index: 10;
-  
-    &::before,
-    &::after,
-    & span {
-      content: "";
-      display: block;
-      height: 2px;
-      background: var(--color-base);
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-  
-    &::before {
-      width: 100%;
-    }
-  
-    & span:nth-child(1) {
-      width: 60%;
-      margin: 0 auto;
-    }
-  
-    & span:nth-child(2) {
-      width: 100%; 
-    }
-  
-    &::after {
-      width: 60%;
-      margin: 0 auto;
-    }
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 11px 11px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  z-index: 10;
 
-    &.active {
-        & span:nth-child(1),
-        &::after {
-          opacity: 0;
-        }
-    
-        &::before {
-          transform: translateY(11px) rotate(45deg);
-          transform-origin: center;
-        }
-    
-        & span:nth-child(2) {
-          transform: rotate(-45deg);
-          transform-origin: center;
-        }
-      }
-
+  @include mq(md) {
+      display: none;
   }
+
+  &::before,
+  &::after,
+  & span {
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--color-base);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    width: 100%;
+  }
+
+  & span:nth-child(1) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  & span:nth-child(2) {
+    width: 100%;
+  }
+
+  &::after {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &.active {
+    & span:nth-child(1),
+    &::after {
+      opacity: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      transform: translateY(-50%) rotate(45deg);
+      transform-origin: center;
+    }
+
+    & span:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      transform: translateY(-50%) rotate(-45deg);
+      transform-origin: center;
+    }
+  }
+
+  @at-root body.active .burger {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 11;
+  }
+}
